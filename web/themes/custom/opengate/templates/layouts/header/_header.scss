@@ -1,0 +1,141 @@
+.header {
+  background-color: $menu-background;
+  color: $menu-color;
+  padding: $gutter*0.75 0;
+  position: fixed;
+  width: 100%;
+  z-index: 110;
+  height: $header-height;
+  top:0;
+  box-sizing: border-box;
+
+  @media screen and (max-width: $medium-screen) {
+    font-size: 1.4em;
+  }
+
+  .layout-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include container($max-width);
+  }
+
+  &__logo {
+    img {
+      max-height: 45px;
+    }
+  }
+
+  &__content {
+
+    @media screen and (max-width: $medium-screen) {
+      width: 0;
+      background-color: $menu-background;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      transition: width 0.5s;
+      box-sizing: border-box;
+      overflow:hidden;
+
+      &.is-active {
+        width: 80vw;
+      }
+    }
+
+    &__main>div {
+      display: flex;
+      align-items: center;
+
+      @media screen and (max-width: $medium-screen) {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      &>*+* {
+        @media screen and (min-width: $medium-screen) {
+          margin-left: $gutter;
+        }
+        @media screen and (max-width: $medium-screen) {
+          margin-top: $gutter*1.25;
+        }
+      }
+    }
+
+    &__wrapper {
+      display: flex;
+
+      @media screen and (max-width: $medium-screen) {
+        display: flex;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        padding: $gutter*3 $gutter*2 $gutter*2 $gutter*2;
+      }
+
+
+      &>div+div {
+        @media screen and (min-width: $medium-screen) {
+          margin-left: $gutter;
+        }
+        @media screen and (max-width: $medium-screen) {
+          margin-top: $gutter*0.75;
+        }
+      }
+
+      ul:not(.contextual-links) {
+        @include reset_menu();
+        display: flex;
+
+        @media screen and (max-width: $medium-screen) {
+          flex-direction: column;
+        }
+
+
+        &>li {
+          &+li {
+            @media screen and (min-width: $medium-screen) {
+              margin-left: $gutter;
+            }
+            @media screen and (max-width: $medium-screen) {
+              margin-top: $gutter*0.75;
+            }
+          }
+        }
+
+      }
+
+      a:not(.button) {
+        @include color_link($menu-color);
+        font-size: $small-font-size;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &.is-active {
+          @include color_link($primary);
+        }
+      }
+    }
+  }
+
+  &__mobile {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+
+    @media screen and (min-width: $medium-screen) {
+      display: none;
+    }
+  }
+
+  .hamburger, .hamburger.active {
+    .hamburger-inner {
+      &, &:before, &:after {
+        background: $menu-color;
+      }
+    }
+  }
+
+}

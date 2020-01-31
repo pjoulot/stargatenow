@@ -1,0 +1,4 @@
+services:
+  opengate_layouts.layout:
+    class: Drupal\opengate_layouts\LayoutService
+    arguments: ['@string_translation']

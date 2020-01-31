@@ -1,0 +1,24 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      css/global.css: {}
+      css/components.css: {}
+      css/layouts.css: {}
+      css/icons.css: {}
+
+global-scripts:
+  version: VERSION
+  js:
+    js/global.js: {}
+    js/components.js: {}
+    js/layouts.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings
+    - core/drupal.dialog.ajax
+    - core/jquery.form
+    - core/drupal.ajax
+    - core/drupal.file

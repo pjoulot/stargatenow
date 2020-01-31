@@ -1,0 +1,58 @@
+$el: '.button';
+
+$colors: ("highlight": ("main": ($highlight), "hover": ($hover-highlight)), "primary": ("main": ($primary), "hover": ($hover-primary)), "secondary": ("main": ($secondary), "hover": ($hover-secondary)));
+$sizes: ("large": "large", "xs": "xs");
+$suffixes: ("arrow": "arrow");
+
+#{$el} {
+  @include button();
+
+  @each $name, $data in $colors {
+      $color: map-get($data, 'main');
+      $hover: map-get($data, 'hover');
+      &--#{$name} {
+        @include button($color, $hover);
+
+        &--outline {
+          @include button($color, $hover, '', '', true);
+        }
+
+        @each $name, $size in $sizes {
+            &--#{$name} {
+              @include button($color, $hover, #{$size});
+
+              &--outline {
+                @include button($color, $hover, #{$size}, '', true);
+              }
+            }
+        }
+
+        @each $name, $suffix in $suffixes {
+            &--#{$name} {
+              @include button($color, $hover, '', #{$suffix});
+            }
+        }
+      }
+  }
+
+
+  &--outline {
+    @include button('', '', '', '', true);
+  }
+
+  @each $name, $size in $sizes {
+    &--#{$name} {
+      @include button('', '', #{$size});
+
+      &--outline {
+        @include button('', '', #{$size}, '', true);
+      }
+    }
+  }
+
+  @each $name, $suffix in $suffixes {
+    &--#{$name} {
+      @include button('', '', '', #{$suffix});
+    }
+  }
+}

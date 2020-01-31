@@ -1,0 +1,63 @@
+layout_onecol:
+  label: 'Opengate - One column'
+  path: layouts
+  template: onecol/layout--opengate--onecol
+  class: '\Drupal\opengate_layouts\Plugin\Layout\OpengateOneColumnLayout'
+  category: 'Columns: 1'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: Content
+
+layout_twocol:
+  label: 'Opengate - Two columns'
+  path: layouts
+  template: twocols/layout--opengate--twocols
+  class: '\Drupal\opengate_layouts\Plugin\Layout\OpengateTwoColumnsLayout'
+  category: 'Columns: 2'
+  default_region: content
+  icon_map:
+    - [first, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+
+layout_threecol:
+  label: 'Opengate - Three columns'
+  path: layouts
+  template: threecols/layout--opengate--threecols
+  class: '\Drupal\opengate_layouts\Plugin\Layout\OpengateThreeColumnsLayout'
+  category: 'Columns: 3'
+  default_region: content
+  icon_map:
+    - [first, second, third]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+
+layout_fourcol:
+  label: 'Opengate - Four columns'
+  path: layouts
+  template: fourcols/layout--opengate--fourcols
+  class: '\Drupal\opengate_layouts\Plugin\Layout\OpengateFourColumnsLayout'
+  category: 'Columns: 4'
+  default_region: content
+  icon_map:
+    - [first, second, third, fourth]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    fourth:
+      label: Fourth

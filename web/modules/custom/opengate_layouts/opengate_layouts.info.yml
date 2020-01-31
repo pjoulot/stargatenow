@@ -1,0 +1,8 @@
+name: Opengate layouts
+description: Module that provides the layouts of the opengate theme.
+package: Layout Builder
+type: module
+core: 8.x
+dependencies:
+  - drupal:layout_builder
+  - drupal:layout_discovery

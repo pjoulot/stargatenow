@@ -1,0 +1,107 @@
+body {
+  font-family: $sans-family;
+  margin: 0;
+  font-size: $base-font-size;
+  color: $text-default;
+  overflow-x: hidden;
+}
+
+h1 {
+  @include h1();
+}
+
+h2 {
+  @include h2();
+}
+
+h3 {
+  @include h3();
+}
+
+p {
+  margin: 0 0 $gutter 0;
+  line-height: 1.6em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  img {
+    margin-bottom: $gutter*1.5;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.embedded-video .player {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+  height: 0;
+  overflow: hidden;
+}
+
+.embedded-video .player iframe,
+.embedded-video .player object,
+.embedded-video .player embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+blockquote {
+  display: block;
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  padding: 2em 0 1em;
+  margin: 1.5em 0;
+  position: relative;
+}
+blockquote:before {
+  content: '\201C';
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 4rem;
+  height: 4rem;
+  font-size: 6em;
+  color: $primary;
+  text-align: center;
+  font-family: Times;
+  border-radius: 50%;
+}
+blockquote cite {
+  display: block;
+  text-align: right;
+  font-size: 0.875em;
+  color: $secondary;
+  font-weight: bold;
+}
+
+// Special styles for the layout builder base.
+
+.layout--color--white {
+  h1, h2, h3, p {
+    color: $white;
+  }
+}

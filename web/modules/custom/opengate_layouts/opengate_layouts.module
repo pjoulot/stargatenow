@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Implements hook_layout_builder_base_background_alter().
+ */
+function opengate_layouts_layout_builder_base_background_alter(&$options) {
+  $options['layout--opengate--background--grey'] = 'Grey';
+  $options['layout--opengate--background--primary'] = 'Primary';
+  $options['layout--opengate--background--secondary'] = 'Secondary';
+}

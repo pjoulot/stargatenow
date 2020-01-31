@@ -1,0 +1,210 @@
+@mixin container($width) {
+  max-width: $width;
+  margin: auto;
+}
+
+@mixin hover() {
+  &:hover, &:focus, &:active {
+    @content;
+  }
+}
+
+@mixin h($caps: false) {
+  font-size: $sans-family;
+  margin-top: 0;
+
+  @if $caps == true {
+    text-transform: uppercase;
+  }
+}
+
+@mixin h1($caps: false) {
+  @include h($caps);
+  font-size: $xxxl-font-size;
+  margin-bottom: $gutter*2;
+
+  @media only screen and (max-width: $medium-screen) {
+    font-size: $xxxl-font-size*0.5;
+  }
+}
+
+@mixin h2($caps: false) {
+  @include h($caps);
+  font-size: $xxl-font-size;
+  color: $black;
+  margin-bottom: $gutter*2;
+
+  &.text-align-center {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      border-radius: 2px;
+      width: 50px;
+      background-color: $primary;
+      bottom: $gutter*-0.5;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  @media only screen and (max-width: $medium-screen) {
+    font-size: $xxl-font-size*0.6;
+  }
+}
+
+@mixin h3($caps: true) {
+  @include h($caps);
+  color: $black;
+  font-size: $large-font-size;
+  font-weight: $sans-bold-weight;
+  margin-bottom: $gutter;
+  letter-spacing: 0.2em;
+}
+
+@mixin flex($break-width) {
+  display: flex;
+  flex-direction: row;
+
+  @include breakpoint(max-width $break-width) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: $medium-screen) {
+    font-size: $large-font-size*0.6;
+  }
+}
+
+@mixin color($color) {
+  color: $color;
+
+  a {
+    color: $color;
+
+    @include hover() {
+      color: $color;
+    }
+  }
+}
+
+@mixin button($color: '', $hover: '', $size: '', $suffix: '', $outline: false) {
+  box-sizing: border-box;
+  display: inline-block;
+  transition: all .2s ease-in-out;
+  appearance: none;
+  text-decoration: none;
+  user-select: none;
+  border: 0;
+  cursor: pointer;
+  white-space: normal;
+  font-family: $sans-family;
+  font-weight: $sans-bold-weight;
+  text-align: center;
+  color: $white !important;
+  line-height: 1.15;
+  border-radius: 30px;
+
+  @include hover {
+    text-decoration: none;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+  }
+
+  @if $color != '' {
+    background: $color;
+  }
+  @else {
+    background: $primary;
+  }
+
+  @include hover {
+    @if $hover != '' {
+      background: $hover;
+    }
+    @else {
+      background: $hover-primary;
+    }
+  }
+
+  @if $outline {
+    background: transparent;
+
+    @if $color != '' {
+      border: solid 1px $color;
+      color: $color !important;
+
+      @include hover {
+        background: $color;
+        color: $white !important;
+      }
+    }
+    @else {
+      border: solid 1px $white;
+
+      @include hover {
+        background: $white;
+        color: $primary !important;
+      }
+    }
+  }
+
+  @if $size == 'large' {
+    font-size: 18px;
+    padding: $gutter $gutter*1.5;
+  }
+  @else if $size == 'xs' {
+    font-size: 10px;
+    padding: $gutter*0.5 $gutter*0.75;
+  }
+  @else {
+    font-size: $small-font-size;
+    padding: $gutter*0.5 $gutter;
+  }
+
+  @if $suffix == 'arrow' {
+    &:after {
+      content: "";
+      background: url('../images/fincad-arrow.svg');
+      display: inline-block;
+      height: 11px;
+      width: 11px;
+      background-repeat: no-repeat;
+      margin-left: $gutter*0.75;
+      transition: all .2s ease-in-out;
+
+      @if $size == 'xs' {
+        height: 8px;
+        width: 5px;
+        margin-left: 6px;
+        background-size: cover;
+      }
+    }
+
+    &:hover {
+      &:after {
+        transform: translate($gutter*0.25, 0);
+      }
+    }
+
+  }
+}
+
+@mixin color_link($color) {
+  color: $color;
+
+  &:hover, &:visited {
+    color: $color;
+  }
+}
+
+@mixin reset_menu() {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

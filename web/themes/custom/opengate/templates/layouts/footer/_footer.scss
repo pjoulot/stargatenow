@@ -1,0 +1,80 @@
+.site-footer {
+  background-color: $dark-grey;
+  color: $grey;
+
+  .layout-container {
+    @include container($max-width);
+  }
+
+  &__content {
+    padding: $gutter*2 0;
+
+    &__grid {
+      display: grid;
+      grid-template-columns: 0.33fr 0.67fr;
+
+      @media only screen and (max-width: $medium-screen) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media only screen and (max-width: $medium-screen) {
+      padding-left: $gutter*0.5;
+      padding-right: $gutter*0.5;
+    }
+  }
+
+  &__bottom {
+    padding: $gutter 0;
+    border-top: solid 1px $dark-medium-grey;
+    font-size: $small-font-size;
+  }
+
+  &__second {
+    @media only screen and (max-width: $medium-screen) {
+      margin-top: $gutter*2;
+    }
+  }
+
+  nav {
+    a {
+      color: $white;
+    }
+
+    ul:not(.contextual-links) {
+      @include reset_menu();
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr) );
+        column-gap: $gutter*2;
+        row-gap: $gutter*2;
+        justify-items: center;
+
+        @media only screen and (max-width: $medium-screen) {
+          text-align: center;
+          row-gap: $gutter;
+        }
+
+      ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: $gutter*0.5;
+        justify-items: start;
+        font-size: 0.8em;
+        margin-top: $gutter;
+
+        @media only screen and (max-width: $medium-screen) {
+          justify-items: center;
+        }
+
+        a {
+          opacity: 0.79;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+    }
+  }
+}

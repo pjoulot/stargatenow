@@ -1,0 +1,34 @@
+#block-opengate-local-tasks>ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+
+  li {
+    a {
+      @include button;
+    }
+
+    &+li {
+      margin-left: $gutter*0.5;
+    }
+  }
+
+}
+
+
+
+
+// Special code for stargate theme.
+
+#jquery-countdown-timer {
+  .countDiv {
+    &:after, &:before {
+      background-color: $white;
+    }
+  }
+}
+
+#jquery-countdown-timer-note {
+  color: $white;
+  font-size: $small-font-size;
+}
