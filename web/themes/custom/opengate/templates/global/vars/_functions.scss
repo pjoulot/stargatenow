@@ -16,11 +16,15 @@
   @if $caps == true {
     text-transform: uppercase;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @mixin h1($caps: false) {
   @include h($caps);
-  font-size: $xxxl-font-size;
+  font-size: $h1-size;
   margin-bottom: $gutter*2;
 
   @media only screen and (max-width: $medium-screen) {
@@ -30,9 +34,10 @@
 
 @mixin h2($caps: false) {
   @include h($caps);
-  font-size: $xxl-font-size;
+  font-size: $h2-size;
   color: $black;
-  margin-bottom: $gutter*2;
+  margin-bottom: $gutter*1.5;
+  line-height: 1.5;
 
   &.text-align-center {
     position: relative;
@@ -59,7 +64,7 @@
 @mixin h3($caps: true) {
   @include h($caps);
   color: $black;
-  font-size: $large-font-size;
+  font-size: $h3-size;
   font-weight: $sans-bold-weight;
   margin-bottom: $gutter;
   letter-spacing: 0.2em;

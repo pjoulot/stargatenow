@@ -7,3 +7,6 @@
 .layout--opengate--background--grey {
   background-color: $grey;
 }
+.layout--opengate--background--gradient-secondary {
+  background-image: radial-gradient(circle at bottom, $secondary, $secondary-dark);
+}

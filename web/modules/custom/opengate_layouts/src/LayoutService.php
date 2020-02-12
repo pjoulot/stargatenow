@@ -30,6 +30,7 @@ class LayoutService {
       'layout--opengate--background--grey' => $this->t('Grey'),
       'layout--opengate--background--primary' => $this->t('Primary'),
       'layout--opengate--background--secondary' => $this->t('Secondary'),
+      'layout--opengate--background--gradient-secondary' => $this->t('Gradient secondary'),
     ];
   }
 

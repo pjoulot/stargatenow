@@ -32,3 +32,11 @@
   color: $white;
   font-size: $small-font-size;
 }
+
+.streaming-list-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(276px,1fr));
+  grid-row-gap: $gutter;
+  grid-column-gap: $gutter;
+  justify-items: center;
+}

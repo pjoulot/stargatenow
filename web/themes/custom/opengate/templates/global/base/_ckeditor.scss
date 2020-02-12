@@ -48,6 +48,14 @@
   }
 }
 
+.font-colossal {
+  font-size: 6em;
+
+  @media only screen and (max-width: $medium-screen) {
+    font-size: 6em*0.5;
+  }
+}
+
 /* Color styles */
 .color-primary {
   color: $primary;
@@ -93,4 +101,10 @@
     opacity: 1;
     color: $white;
   }
+}
+
+/* Margins */
+
+.margin-none {
+  margin: 0;
 }
