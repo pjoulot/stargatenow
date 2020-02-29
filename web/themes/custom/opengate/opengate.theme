@@ -4,3 +4,11 @@
  * @file
  * Functions to support theming in the Opengate theme.
  */
+
+ /**
+  * Implements hook_preprocess_node().
+  */
+ function opengate_preprocess_node(&$variables) {
+  // Remove role attribute that generates an HTML warning.
+  unset($variables['attributes']['role']);
+ }
