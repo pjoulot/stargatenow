@@ -2,6 +2,14 @@
   background-color: $dark-grey;
   color: $grey;
 
+  a, a:visited {
+    color: inherit;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
   .layout-container {
     @include container($max-width);
   }
@@ -41,7 +49,7 @@
       color: $white;
     }
 
-    ul:not(.contextual-links) {
+    #{$ul} {
       @include reset_menu();
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr) );
@@ -64,6 +72,10 @@
 
         @media only screen and (max-width: $medium-screen) {
           justify-items: center;
+        }
+
+        li {
+          margin: 0;
         }
 
         a {

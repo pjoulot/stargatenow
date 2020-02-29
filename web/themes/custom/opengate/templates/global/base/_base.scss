@@ -31,11 +31,13 @@ p {
   }
 }
 
-a {
+a, a:visited {
   text-decoration: none;
+  color: $primary;
 
   &:hover {
     color: $secondary;
+    cursor: pointer;
   }
 }
 
@@ -96,6 +98,23 @@ blockquote cite {
   font-size: 0.875em;
   color: $secondary;
   font-weight: bold;
+}
+
+#{$ul} {
+  list-style-type: disc;
+}
+
+#{$ul}, ol {
+  margin: 0 0 $gutter 0;
+  padding-left: $gutter*1.5;
+
+  li {
+    margin-bottom: $gutter*0.5;
+
+    &:before {
+      color: $primary;
+    }
+  }
 }
 
 // Special styles for the layout builder base.

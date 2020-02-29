@@ -1,11 +1,13 @@
+$header-padding: $gutter*0.75;
+
 .header {
   background-color: $menu-background;
   color: $menu-color;
-  padding: $gutter*0.75 0;
+  padding: $header-padding;
   position: fixed;
   width: 100%;
   z-index: 110;
-  height: $header-height;
+  height: $header-height 0;
   top:0;
   box-sizing: border-box;
 
@@ -22,7 +24,7 @@
 
   &__logo {
     img {
-      max-height: 45px;
+      max-height: ($header-height - $header-padding*2);
     }
   }
 
@@ -83,7 +85,7 @@
         }
       }
 
-      ul:not(.contextual-links) {
+      #{$ul} {
         @include reset_menu();
         display: flex;
 
@@ -93,6 +95,8 @@
 
 
         &>li {
+          margin: 0;
+
           &+li {
             @media screen and (min-width: $medium-screen) {
               margin-left: $gutter;
