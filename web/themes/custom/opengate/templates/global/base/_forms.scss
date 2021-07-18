@@ -1,0 +1,25 @@
+$form-input-padding: 10px 15px;
+$form-border-color: $border-grey;
+
+input[type="text"], input[type="email"], input[type="tel"] {
+  padding: $form-input-padding;
+  border: solid 1px $form-border-color;
+  width: 100%;
+}
+
+textarea {
+  padding: $form-input-padding;
+  border: solid 1px $form-border-color;
+  width: 100%;
+}
+
+form .form-item {
+  margin-bottom: $gutter;
+}
+
+.webform-submission-form {
+  @include container($regular-container-width);
+  margin-bottom: $gutter*2;
+
+  
+}
