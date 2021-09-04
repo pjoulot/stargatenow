@@ -1,8 +1,9 @@
 name: Opengate
 type: theme
 description: 'Opengate theme.'
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 logo: 'logo.svg'
+base theme: stable
 
 libraries:
   - opengate/global-styling
