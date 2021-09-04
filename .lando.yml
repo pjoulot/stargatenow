@@ -2,7 +2,7 @@ name: stargatenow
 recipe: drupal8
 config:
   webroot: web
-  php: '7.2'
+  php: '7.4'
   xdebug: true
   cache: false
   via: apache
