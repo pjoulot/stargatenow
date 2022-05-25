@@ -14,7 +14,7 @@
     "bourbon": "^5.0.0-beta.8",
     "bourbon-neat": "^2.1.0",
     "browser-sync": "^2.10.0",
-    "grunt": "^0.4.5",
+    "grunt": "^1.5.3",
     "grunt-assemble": "^0.6.3",
     "grunt-bump": "^0.8.0",
     "grunt-contrib-clean": "^0.6.0",
