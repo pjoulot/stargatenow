@@ -45,6 +45,12 @@ jobs:
           chmod 700 ~/.ssh
           printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
+          # Public keys are not secret: print the pubkey this SSH_KEY corresponds to,
+          # so it can be matched against the server's authorized_keys. -P "" also
+          # fails cleanly if the key is passphrase-protected (unusable in CI).
+          echo "Public key derived from SSH_KEY secret (must be in the server's authorized_keys):"
+          ssh-keygen -y -P "" -f ~/.ssh/deploy_key \
+            || echo "::error::Could not read SSH_KEY. It may be malformed or passphrase-protected (passphrase keys can't be used in CI)."
           ssh-keyscan -p "${SSH_PORT:-22}" -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
 
       - name: Deploy with rsync
@@ -55,7 +61,7 @@ jobs:
           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
         run: |
           rsync -avz --delete \
-            -e "ssh -i ~/.ssh/deploy_key -p ${SSH_PORT:-22} -o StrictHostKeyChecking=yes" \
+            -e "ssh -i ~/.ssh/deploy_key -p ${SSH_PORT:-22} -o StrictHostKeyChecking=yes -o IdentitiesOnly=yes -o BatchMode=yes -o PreferredAuthentications=publickey" \
             --exclude='.git' \
             --exclude='.github' \
             --exclude='.gitignore' \
