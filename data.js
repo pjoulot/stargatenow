@@ -29,12 +29,9 @@ window.SGN = {
     { title:"X (Twitter) Blast", cta:"Post now", type:"tweet",
       copy:"Post with <b>#SaveStargate</b> and tag <b>@AmazonMGMStudios</b>. Volume is the message — coordinate, repeat, amplify." },
 
-    { title:"Sign Petitions", cta:"Sign now", type:"reveal",
-      copy:"Add your name to the Change.org movements growing by the hour. One signature is a data point; a hundred thousand is a headline.",
-      items:[
-        { kind:"link", label:"Revive the Stargate Franchise", sub:"change.org", href:"https://www.change.org/p/amazonstudios-revive-the-stargate-franchise" },
-        { kind:"link", label:"Save the New Series — Let Martin Gero Build the Future", sub:"change.org", href:"https://www.change.org/p/save-the-new-stargate-series-let-martin-gero-build-the-future-of-the-franchise" }
-      ] },
+    { title:"Sign the Petition", cta:"Sign now", type:"link",
+      href:"https://www.change.org/p/save-stargate-with-martin-gero",
+      copy:"Add your name to the Change.org petition growing by the hour. One signature is a data point; a hundred thousand is a headline." },
 
     { title:"Respectful Emails", cta:"Email execs", type:"reveal",
       copy:"Send targeted, <b>polite</b> notes straight to Amazon leadership. Each opens a pre-written, respectful email.",
@@ -46,8 +43,7 @@ window.SGN = {
     { title:"Physical Letters", cta:"View address", type:"reveal",
       copy:"Mail printed letters to Amazon leadership — paper is hard to ignore.",
       items:[
-        { kind:"address", label:"Amazon MGM Studios", lines:["Attn: Prime Video / Amazon MGM Studios Leadership","9336 Washington Blvd","Culver City, CA 90232"] },
-        { kind:"address", label:"Amazon.com, Inc.", lines:["Attn: Prime Video / Amazon MGM Studios","410 Terry Avenue North","Seattle, WA 98109-5210"] }
+        { kind:"address", label:"Peter Friedlander", lines:["Head of Global Television","Amazon MGM Studios","The Culver Studios","9336 West Washington Boulevard","Culver City, CA 90232"] }
       ] },
 
     { title:"Direct Support", cta:"Contact Amazon", type:"reveal",
