@@ -7,11 +7,14 @@ Martin Gero's greenlit *Stargate* revival.
 
 | File             | Purpose                                                            |
 |------------------|-------------------------------------------------------------------|
-| `index.html`     | The entire page (markup + inline CSS + small build scripts).      |
-| `data.js`        | Editable content: the 8 action items and the footer social links. |
-| `martin-gero.jpg`| Briefing portrait.                                                 |
-| `gate.png`       | White Destiny-gate line art (transparent) behind the action card. |
-| `favicon.svg`    | Stargate-glyph favicon.                                            |
+| `index.html`         | The entire page (markup + inline CSS + small build scripts).  |
+| `data.js`            | Editable content: actions, tweet, email, event, socials.      |
+| `images/martin-gero.jpg`    | Briefing portrait.                                     |
+| `images/gate.png`           | White Destiny-gate line art (transparent) behind the card. |
+| `images/og-image.png`       | 1200×630 social share card (Open Graph / Twitter).     |
+| `images/favicon.svg`        | Stargate-glyph favicon.                                |
+| `images/apple-touch-icon.png`| 180×180 iOS home-screen icon.                         |
+| `robots.txt` / `sitemap.xml` | SEO crawler files.                                    |
 
 There is **no backend and no build step** — it's plain HTML/CSS/JS. The nav,
 hero, countdown action card, briefing, and the "Eight ways to apply pressure"
@@ -35,9 +38,22 @@ Everything editable lives in `data.js`:
     `email`), or an `address` (label + `lines`, with a copy button).
 - `socials` — footer social icons/links (currently X only).
 
-The hero countdown target lives in the inline `/* countdown */` script in
-`index.html` (currently a rolling offset; set it to a fixed date for a real
-event).
+The tweetstorm date/time lives in `data.js` → `event` (`start` is ISO 8601 with
+an explicit offset; it drives both the hero countdown and the "Add to Calendar"
+`.ics`). **If you change the event date, also update it in two other places:**
+the `Event` JSON-LD block in `index.html`'s `<head>`, and `<lastmod>` in
+`sitemap.xml`.
+
+## SEO & accessibility notes
+
+- `<head>` includes title, description, canonical, Open Graph + Twitter card
+  (image: `images/og-image.png`), `theme-color`, and `Organization` + `Event` JSON-LD.
+- All inline SVG icons are `aria-hidden` (every control has visible text);
+  decorative images use empty `alt`; keyboard focus is visible via
+  `:focus-visible`; animations respect `prefers-reduced-motion`.
+- Known trade-off: the top-nav links (`Briefing`, `Take Action`) are hidden
+  below 860px (no hamburger) — the page is a single scroll, and the primary CTA
+  stays visible. Add a mobile menu if the nav grows.
 
 ## Live #SaveStargate feed — deferred
 
