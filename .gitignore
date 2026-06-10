@@ -1,0 +1,8 @@
+# Local Claude Code settings
+.claude/
+
+# Backup/export archive (not part of the site)
+StargateNow.zip
+
+# Playwright MCP tooling artifacts
+.playwright-mcp/

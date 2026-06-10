@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>STARGATENOW — Save the Stargate Revival · #SaveStargate</title>
+<meta name="description" content="STARGATENOW is part of the fan campaign to reverse Amazon MGM Studios' cancellation of Martin Gero's greenlit Stargate revival. Join the #SaveStargate tweetstorm, sign the petitions, and take action." />
+<link rel="canonical" href="https://stargatenow.com/" />
+<meta name="theme-color" content="#0A1019" />
+<meta name="robots" content="index, follow" />
+
+<!-- icons -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="STARGATENOW" />
+<meta property="og:title" content="STARGATENOW — Save the Stargate Revival" />
+<meta property="og:description" content="Join the #SaveStargate campaign to reverse the cancellation of Martin Gero's greenlit Stargate revival." />
+<meta property="og:url" content="https://stargatenow.com/" />
+<meta property="og:image" content="https://stargatenow.com/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="STARGATENOW — Save the Stargate Revival · #SaveStargate" />
+
+<!-- Twitter / X card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@StargateNow_EU" />
+<meta name="twitter:title" content="STARGATENOW — Save the Stargate Revival" />
+<meta name="twitter:description" content="Join the #SaveStargate campaign to reverse the cancellation of Martin Gero's greenlit Stargate revival." />
+<meta name="twitter:image" content="https://stargatenow.com/og-image.png" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "STARGATENOW",
+      "url": "https://stargatenow.com/",
+      "description": "Fan campaign to reverse the cancellation of Martin Gero's greenlit Stargate revival.",
+      "logo": "https://stargatenow.com/apple-touch-icon.png",
+      "sameAs": ["https://x.com/StargateNow_EU"]
+    },
+    {
+      "@type": "Event",
+      "name": "Global #SaveStargate Tweetstorm",
+      "description": "A synchronized worldwide tweetstorm using #SaveStargate and #StargateNow to ask Amazon MGM Studios and Prime Video to reconsider the cancelled Stargate revival.",
+      "startDate": "2026-06-10T22:00:00+02:00",
+      "endDate": "2026-06-10T23:00:00+02:00",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": { "@type": "VirtualLocation", "url": "https://x.com/intent/tweet" },
+      "image": "https://stargatenow.com/og-image.png",
+      "organizer": { "@type": "Organization", "name": "STARGATENOW", "url": "https://stargatenow.com/" }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#0A1019; --bg-2:#0C1422;
+  --card:#0E1422; --card-2:#0B1019;
+  --line:rgba(159,216,242,.12); --line-2:rgba(159,216,242,.24);
+  --eh-light:#9FD8F2; --eh:#5AAEDD; --eh-deep:#3B82C4;
+  --amber:#FFB627; --amber-soft:#FFE7B0;
+  --ink:#EAF1F9; --ink-2:#AAB7C9; --ink-3:#6F7D91; --ink-4:#47525F;
+  --mono:'Space Mono',ui-monospace,monospace;
+  --display:'Space Grotesk',system-ui,sans-serif;
+  --sans:'IBM Plex Sans',system-ui,sans-serif;
+  --maxw:1280px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+section{scroll-margin-top:84px;position:relative}
+a{color:inherit;text-decoration:none}
+
+/* keyboard focus visibility */
+:focus-visible{outline:2px solid var(--eh-light);outline-offset:3px}
+.btn:focus-visible,.r-act:focus-visible,.opt:focus-visible,.mini:focus-visible,.nav-cta:focus-visible{outline-offset:2px}
+
+/* honour reduced-motion across all animations/transitions */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  html{scroll-behavior:auto}
+}
+
+/* texture */
+.tex{position:fixed;inset:0;z-index:0;pointer-events:none}
+.tex-stars{background-image:
+  radial-gradient(1px 1px at 18% 28%,rgba(159,216,242,.5),transparent),
+  radial-gradient(1px 1px at 72% 16%,rgba(159,216,242,.35),transparent),
+  radial-gradient(1px 1px at 42% 60%,rgba(255,255,255,.4),transparent),
+  radial-gradient(1px 1px at 86% 68%,rgba(159,216,242,.3),transparent),
+  radial-gradient(1.4px 1.4px at 60% 40%,rgba(159,216,242,.4),transparent),
+  radial-gradient(1px 1px at 33% 12%,rgba(255,255,255,.25),transparent),
+  radial-gradient(1px 1px at 95% 42%,rgba(159,216,242,.3),transparent);
+  opacity:.6}
+.tex-scan{background-image:repeating-linear-gradient(to bottom,transparent 0 2px,rgba(0,0,0,.16) 2px 4px);opacity:.45;mix-blend-mode:multiply}
+.tex-grain{inset:-50%;width:200%;height:200%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.04;mix-blend-mode:overlay;animation:grain 1.2s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-4%,3%)}50%{transform:translate(3%,-3%)}75%{transform:translate(-3%,2%)}100%{transform:translate(0,0)}}
+@media(prefers-reduced-motion:reduce){.tex-grain{animation:none}}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,56px);position:relative;z-index:5}
+.mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.24em;font-size:13px;color:var(--ink-3)}
+.mono.b{color:var(--eh-light)} .mono.a{color:var(--amber)}
+
+/* ===== HEADER ===== */
+.nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(12px);background:rgba(6,8,13,.72);border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:14px clamp(20px,5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:11px}
+.gate{width:30px;height:30px;color:var(--eh-light);filter:drop-shadow(0 0 6px rgba(159,216,242,.5))}
+.wm{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:.03em}
+.wm b{color:var(--eh-light)}
+.menu{display:flex;align-items:center;gap:30px}
+.menu a{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:13px;color:var(--ink-2);transition:color .18s;position:relative;padding:4px 0}
+.menu a::after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--eh-light);transition:width .2s}
+.menu a:hover{color:var(--eh-light)} .menu a:hover::after{width:100%}
+.nav-cta{font-family:var(--sans);font-weight:600;font-size:15px;background:var(--amber);color:#1A1303;padding:9px 16px;transition:.18s;box-shadow:0 0 22px -8px rgba(255,182,39,.6);white-space:nowrap}
+.nav-cta:hover{background:#FFC247}
+.burger{display:none}
+@media(max-width:860px){.menu{display:none}}
+
+/* ===== HERO (split) ===== */
+.hero{padding:clamp(40px,6vw,76px) 0 clamp(48px,7vw,90px);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero-left .eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:22px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--eh-light);box-shadow:0 0 10px var(--eh-light)}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(38px,5.4vw,68px);line-height:1.0;letter-spacing:-.025em;margin-bottom:22px}
+.hero h1 .hl{color:var(--eh-light)}
+.hero .pitch{font-size:clamp(18px,1.8vw,22px);color:var(--ink-2);font-weight:300;max-width:46ch;line-height:1.7}
+.hero .pitch b{color:var(--ink);font-weight:500}
+.hero .scroll-hint{margin-top:34px;display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
+.hero .scroll-hint svg{width:16px;height:16px;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+
+/* action card */
+.action-card{position:relative;background:linear-gradient(180deg,#101A2E,#0A0F1A);border:1px solid var(--line);overflow:hidden;padding:clamp(26px,3vw,38px)}
+.action-card::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,var(--amber),transparent);opacity:.85}
+.ac-glow{position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(circle at 50% 35%,rgba(159,216,242,.16),rgba(59,130,196,.06) 40%,transparent 66%)}
+.ac-ring{position:absolute;left:50%;top:34%;transform:translate(-50%,-50%);width:360px;height:auto;opacity:.45;z-index:0;animation:spin 90s linear infinite;filter:drop-shadow(0 0 7px rgba(159,216,242,.35))}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.ac-ring{animation:none}}
+.ac-in{position:relative;z-index:1}
+.ac-kick{display:inline-flex;align-items:center;gap:9px;margin-bottom:18px}
+.ac-kick .pulse{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(255,182,39,.6);animation:p 2s ease-out infinite}
+@keyframes p{0%{box-shadow:0 0 0 0 rgba(255,182,39,.5)}70%{box-shadow:0 0 0 9px rgba(255,182,39,0)}100%{box-shadow:0 0 0 0 rgba(255,182,39,0)}}
+.ac-kick .mono{color:var(--amber);letter-spacing:.28em}
+.ac-title{font-family:var(--display);font-weight:700;font-size:clamp(26px,3vw,38px);line-height:1.02;letter-spacing:-.02em;margin-bottom:24px}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.cd-b{position:relative;background:rgba(8,12,20,.7);border:1px solid var(--line);padding:16px 6px 12px;text-align:center}
+.cd-b.s{border-color:rgba(255,182,39,.35);box-shadow:0 0 28px -10px rgba(255,182,39,.4) inset, 0 0 26px -10px rgba(255,182,39,.3)}
+.cd-n{font-family:var(--display);font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1;font-variant-numeric:tabular-nums;text-shadow:0 0 22px rgba(159,216,242,.25)}
+.cd-b.s .cd-n{color:var(--amber-soft);text-shadow:0 0 22px rgba(255,182,39,.4)}
+.cd-u{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-top:9px}
+.times{font-family:var(--mono);font-size:13.5px;letter-spacing:.14em;color:var(--ink-2);margin-bottom:22px;text-align:center}
+.times i{color:#5C6878;font-style:normal;margin:0 7px}
+.ac-cta{display:flex;flex-direction:column;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-weight:500;font-size:16.5px;padding:16px 22px;border:1px solid transparent;cursor:pointer;transition:transform .16s,background .18s,box-shadow .18s,border-color .18s}
+.btn svg{width:17px;height:17px}
+.btn-amber{background:var(--amber);color:#1A1303;font-weight:600;box-shadow:0 0 28px -8px rgba(255,182,39,.55)}
+.btn-amber:hover{background:#FFC247;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-2)}
+.btn-ghost:hover{border-color:var(--eh);color:var(--eh-light);background:rgba(159,216,242,.05)}
+
+/* ===== shared section head ===== */
+.sec{padding:clamp(60px,8vw,110px) 0}
+.shead{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.shead .bar{flex:1;height:1px;background:var(--line)}
+.h2{font-family:var(--display);font-weight:700;font-size:clamp(34px,4.8vw,58px);line-height:1.04;letter-spacing:-.02em}
+.h2 .hl{color:var(--eh-light)}
+.hr{height:1px;border:0;background:linear-gradient(90deg,transparent,var(--line-2) 18%,var(--line-2) 82%,transparent);max-width:var(--maxw);margin:0 auto}
+
+/* ===== BRIEFING ===== */
+.brief-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(34px,5vw,64px);margin-top:40px;align-items:start}
+.subject{display:flex;align-items:center;gap:18px;margin-bottom:28px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.subject .ph{position:relative;width:96px;height:96px;flex:none;border:1px solid var(--line-2);padding:4px;background:rgba(159,216,242,.04);box-shadow:0 0 34px -14px var(--eh-light)}
+.subject .ph::before{content:"";position:absolute;left:8px;right:8px;top:-1px;height:1px;background:linear-gradient(90deg,transparent,var(--eh-light),transparent);opacity:.7}
+.subject .ph img{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.96) contrast(1.02)}
+.subject .cap .lab{font-family:var(--mono);text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--eh-light);margin-bottom:7px}
+.subject .cap .nm{font-family:var(--display);font-weight:600;font-size:23px;letter-spacing:-.01em;color:var(--ink)}
+.subject .cap .role{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-top:5px}
+.brief-lead{font-family:var(--display);font-weight:500;font-size:clamp(24px,2.5vw,33px);line-height:1.35;letter-spacing:-.01em;color:var(--ink)}
+.brief-lead .hl{color:var(--eh-light)}
+.brief-body{font-size:18.5px;color:var(--ink-2);font-weight:300;line-height:1.8;margin-top:24px;max-width:54ch}
+.brief-body b{color:var(--ink);font-weight:500}
+.timeline{border-left:1px solid var(--line-2);padding-left:26px;display:flex;flex-direction:column;gap:24px}
+.tl-item{position:relative}
+.tl-item::before{content:"";position:absolute;left:-31px;top:4px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1.5px solid var(--eh)}
+.tl-item.crit::before{background:var(--amber);border-color:var(--amber);box-shadow:0 0 12px var(--amber)}
+.tl-date{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--eh-light);margin-bottom:5px}
+.tl-item.crit .tl-date{color:var(--amber)}
+.tl-txt{font-size:16.5px;color:var(--ink-2);font-weight:300;line-height:1.6}
+.tl-txt b{color:var(--ink);font-weight:600}
+
+/* ===== ACTIONS — dial sequence ===== */
+.dial{margin-top:42px;display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:64px 1fr auto;gap:clamp(16px,2.4vw,34px);align-items:center;padding:24px 8px;border-bottom:1px solid var(--line);transition:background .2s,padding .2s;position:relative}
+.row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--eh-light);opacity:0;transition:opacity .2s}
+.row:hover{background:rgba(159,216,242,.03)}
+.row:hover::before{opacity:.8}
+.row.prio:hover::before{background:var(--amber);opacity:.9}
+.r-idx{display:flex;align-items:center;gap:12px}
+.chev{width:32px;height:32px;color:var(--eh);opacity:.72;transition:.2s}
+.chev svg{width:100%;height:100%;display:block}
+.row:hover .chev{opacity:1;color:var(--eh-light);filter:drop-shadow(0 0 8px rgba(159,216,242,.5))}
+.row.prio:hover .chev{color:var(--amber);filter:drop-shadow(0 0 8px rgba(255,182,39,.5))}
+.r-num{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--ink-3)}
+.r-main{min-width:0}
+.r-title{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.r-title h3{font-family:var(--display);font-weight:600;font-size:clamp(23px,2.4vw,30px);letter-spacing:-.01em}
+.tagp{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);border:1px solid rgba(255,182,39,.4);padding:3px 7px}
+.r-copy{font-size:17px;color:var(--ink-2);font-weight:300;margin-top:8px;max-width:62ch}
+.r-copy b{color:var(--eh-light);font-weight:500}
+.r-act{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;border:1px solid var(--line-2);padding:13px 19px;white-space:nowrap;transition:.18s}
+.r-act svg{width:14px;height:14px;transition:transform .18s}
+.r-act:hover{border-color:var(--eh);color:var(--eh-light);background:rgba(159,216,242,.05)}
+.r-act:hover svg{transform:translateX(3px)}
+.row.prio .r-act{background:var(--amber);color:#1A1303;border-color:var(--amber);font-weight:600;box-shadow:0 0 22px -10px rgba(255,182,39,.6)}
+.row.prio .r-act:hover{background:#FFC247;color:#1A1303}
+/* action wrapper + expandable reveal */
+.action{border-bottom:1px solid var(--line)}
+.dial .row{border-bottom:0}
+button.r-act{cursor:pointer;font-family:inherit;color:inherit;background:none}
+.r-act .cv{transition:transform .22s}
+.r-act:hover .cv{transform:none}
+.action.open .r-act .cv{transform:rotate(180deg)}
+.action.open .row{background:rgba(159,216,242,.03)}
+.action.open .row::before{opacity:.8}
+.action.open.prio .row::before,.action.prio.open .row::before{background:var(--amber);opacity:.9}
+.r-act.copied{border-color:var(--eh);color:var(--eh-light)}
+.panel{display:none;padding:2px 8px 24px}
+.action.open .panel{display:block;animation:reveal .22s ease}
+@keyframes reveal{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.action.open .panel{animation:none}}
+.panel-grid{display:flex;flex-direction:column;gap:10px;max-width:780px}
+.opt{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 17px;border:1px solid var(--line);background:rgba(8,12,20,.45);color:var(--ink);transition:border-color .16s,background .16s}
+.opt:hover{border-color:var(--eh);background:rgba(159,216,242,.05)}
+.opt .opt-main{display:flex;flex-direction:column;gap:4px;min-width:0}
+.opt .opt-label{font-family:var(--display);font-weight:600;font-size:16.5px;letter-spacing:-.01em}
+.opt:hover .opt-label{color:var(--eh-light)}
+.opt .opt-sub{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--ink-3);overflow-wrap:anywhere}
+.opt>svg{width:16px;height:16px;flex:none;color:var(--eh)}
+.opt.addr{align-items:flex-start}
+.opt.addr .opt-sub{line-height:1.55}
+.mini{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);border:1px solid var(--line-2);background:none;padding:8px 11px;cursor:pointer;white-space:nowrap;transition:border-color .16s,color .16s}
+.mini svg{width:13px;height:13px}
+.mini:hover,.mini.copied{border-color:var(--eh);color:var(--eh-light)}
+
+/* ===== FOOTER ===== */
+footer{padding:clamp(50px,7vw,84px) 0 56px;border-top:1px solid var(--line)}
+.foot-top{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.social{display:flex;gap:10px}
+.social a{width:40px;height:40px;border:1px solid var(--line-2);display:grid;place-items:center;color:var(--ink-2);transition:.18s}
+.social a svg{width:17px;height:17px}
+.social a:hover{border-color:var(--eh);color:var(--eh-light);background:rgba(159,216,242,.04)}
+.foot-bot{margin-top:36px;padding-top:26px;border-top:1px solid var(--line);display:flex;gap:32px;justify-content:space-between;flex-wrap:wrap}
+.foot-bot .cp{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--ink-3);text-transform:uppercase}
+.disc{font-size:14px;color:var(--ink-3);max-width:64ch;line-height:1.75;font-weight:300}
+
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .brief-grid{grid-template-columns:1fr;gap:36px}
+}
+@media(max-width:560px){
+  .row{grid-template-columns:44px 1fr;gap:14px}
+  .r-act{grid-column:2;justify-self:start;margin-top:10px}
+}
+</style>
+</head>
+<body>
+<div class="tex tex-stars"></div>
+<div class="tex tex-scan"></div>
+<div class="tex tex-grain"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top">
+      <svg class="gate" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.2" opacity=".6"/><path d="M12 2.6l1.7 2.6h-3.4L12 2.6zM21.4 12l-2.6 1.7v-3.4L21.4 12zM12 21.4l-1.7-2.6h3.4L12 21.4zM2.6 12l2.6-1.7v3.4L2.6 12z" fill="currentColor"/></svg>
+      <span class="wm">STARGATE<b>NOW</b></span>
+    </a>
+    <div class="menu">
+      <a href="#briefing">Briefing</a>
+      <a href="#action">Take Action</a>
+    </div>
+    <a class="nav-cta" data-xpost href="https://x.com/intent/tweet" target="_blank" rel="noopener">Join the Tweetstorm</a>
+  </div>
+</nav>
+
+<span id="top"></span>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="eyebrow"><span class="dot"></span><span class="mono b">Fan Mobilization · Est. 2026</span></div>
+        <h1>The fan offensive to <span class="hl">reopen</span> the gate.</h1>
+        <p class="pitch">Amazon MGM Studios cancelled Martin Gero's greenlit <b>Stargate</b> revival. <b>STARGATENOW</b> is part of the coordinated campaign to reverse that decision — and right now, everything points at one synchronized action tonight.</p>
+        <a class="scroll-hint" href="#briefing">Briefing below
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+        </a>
+      </div>
+
+      <aside class="action-card">
+        <div class="ac-glow"></div>
+        <img class="ac-ring" src="gate.png" alt="" aria-hidden="true" />
+        <div class="ac-in">
+          <div class="ac-kick"><span class="pulse"></span><span class="mono">Current Action</span></div>
+          <h2 class="ac-title">Global Tweetstorm #SaveStargate</h2>
+          <div class="cd" id="cd" role="timer" aria-label="Time remaining until the global tweetstorm">
+            <div class="cd-b"><span class="cd-n" data-cd="d">00</span><span class="cd-u">Days</span></div>
+            <div class="cd-b"><span class="cd-n" data-cd="h">06</span><span class="cd-u">Hours</span></div>
+            <div class="cd-b"><span class="cd-n" data-cd="m">14</span><span class="cd-u">Mins</span></div>
+            <div class="cd-b s"><span class="cd-n" data-cd="s">32</span><span class="cd-u">Secs</span></div>
+          </div>
+          <p class="times">10 PM CET <i>|</i> 4 PM ET <i>|</i> 1 PM PT</p>
+          <div class="ac-cta">
+            <a class="btn btn-amber" data-xpost href="https://x.com/intent/tweet" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Join the Tweetstorm on X</a>
+            <a class="btn btn-ghost" id="calBtn" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4.5" width="18" height="16" rx="1"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>Add to Calendar</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<hr class="hr" />
+
+<!-- BRIEFING -->
+<section class="sec" id="briefing">
+  <div class="wrap">
+    <div class="shead"><span class="mono b">Briefing / 01</span><span class="bar"></span><span class="mono">Situation Report</span></div>
+    <h2 class="h2">The gate is closing.<br>Help us <span class="hl">open</span> it.</h2>
+    <div class="brief-grid">
+      <div>
+        <div class="subject">
+          <div class="ph"><img src="martin-gero.jpg" alt="Martin Gero, showrunner of the cancelled Stargate revival" /></div>
+          <div class="cap">
+            <div class="lab">Subject · Briefing 01</div>
+            <div class="nm">Martin Gero</div>
+            <div class="role">Showrunner / Creator · Greenlit Revival 2025</div>
+          </div>
+        </div>
+        <p class="brief-lead">A greenlit revival. A staffed writers' room. A fanbase that crossed galaxies. <span class="hl">All of it shelved overnight.</span></p>
+        <p class="brief-body">Amazon MGM Studios unexpectedly cancelled Martin Gero's revival just as pre-production peaked — citing fears that a series <b>honoring established canon</b> wouldn't capture a mass audience. We intend to prove them wrong, loudly and on the record.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-date">Nov 2025</div><div class="tl-txt"><b>Revival ordered.</b> Gero's series gets the greenlight; a writers' room assembles.</div></div>
+        <div class="tl-item"><div class="tl-date">Early 2026</div><div class="tl-txt"><b>Pre-production peaks.</b> Scripts, design, momentum — the gate is spinning up.</div></div>
+        <div class="tl-item crit"><div class="tl-date">The cancellation</div><div class="tl-txt"><b>Studio pulls the plug.</b> Executives halt the project, citing mass-audience doubts.</div></div>
+        <div class="tl-item crit"><div class="tl-date">Now — your move</div><div class="tl-txt"><b>The fan offensive.</b> Coordinated pressure, every channel, until they reconsider.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr" />
+
+<!-- ACTIONS -->
+<section class="sec" id="action">
+  <div class="wrap">
+    <div class="shead"><span class="mono b">Briefing / 02</span><span class="bar"></span><span class="mono">Mobilization Protocol</span></div>
+    <h2 class="h2">Eight ways to <span class="hl">apply pressure</span>.</h2>
+    <div class="dial" id="dial"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="#top"><svg class="gate" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.2" opacity=".6"/><path d="M12 2.6l1.7 2.6h-3.4L12 2.6zM21.4 12l-2.6 1.7v-3.4L21.4 12zM12 21.4l-1.7-2.6h3.4L12 21.4zM2.6 12l2.6-1.7v3.4L2.6 12z" fill="currentColor"/></svg><span class="wm">STARGATE<b>NOW</b></span></a>
+      <div class="social" id="social"></div>
+    </div>
+    <div class="foot-bot">
+      <p class="cp">© 2022–2026 STARGATENOW · A FAN MOVEMENT</p>
+      <p class="disc">This campaign is entirely fan-driven. stargatenow.com is an independent community movement and is not affiliated with, authorized, or endorsed by MGM, Amazon Studios, Prime Video, or the Stargate franchise creators.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+/* countdown */
+(function(){var e={d:'[data-cd=d]',h:'[data-cd=h]',m:'[data-cd=m]',s:'[data-cd=s]'};for(var k in e)e[k]=document.querySelector(e[k]);var t=new Date((window.SGN&&SGN.event&&SGN.event.start)||'2026-06-10T22:00:00+02:00').getTime();function pad(n){return String(n).padStart(2,'0')}function tick(){var d=Math.max(0,t-Date.now()),x=Math.floor(d/1000);var dd=Math.floor(x/86400);x-=dd*86400;var hh=Math.floor(x/3600);x-=hh*3600;var mm=Math.floor(x/60),ss=x-mm*60;e.d.textContent=pad(dd);e.h.textContent=pad(hh);e.m.textContent=pad(mm);e.s.textContent=pad(ss)}tick();setInterval(tick,1000)})();
+
+/* build actions */
+var DIAL_ICONS=[
+ '<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231z" fill="currentColor" stroke="none"/>',
+ '<path d="M4 20l3.6-1L19 7.6a2.1 2.1 0 0 0-3-3L4.9 15.9 4 20z"/><path d="M14.4 6.6l3 3"/>',
+ '<rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6.5l8.5 6 8.5-6"/>',
+ '<path d="M3 6.5l9-3.5 9 3.5v2.5l-9 3.5L3 9z"/><path d="M3 9v9a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V9"/><path d="M9 13h6"/>',
+ '<path d="M21 11.5a8.38 8.38 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 20.5l1.5-5.2A8.4 8.4 0 0 1 3.5 11.5 8.38 8.38 0 0 1 12 3a8.38 8.38 0 0 1 9 8.5z"/>',
+ '<path d="M21.5 3.5l-19 8.2 6.7 2.3 2.3 6.7 9.9-17.1z"/><path d="M9.2 14l3.6-3.6"/>',
+ '<circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><path d="M8.3 10.8l7.4-4.3M8.3 13.2l7.4 4.3"/>',
+ '<rect x="3" y="4" width="18" height="14" rx="1.5"/><path d="M10 8.5l5 2.5-5 2.5z" fill="currentColor" stroke="none"/><path d="M8 21h8"/>'
+];
+(function(){
+  var d=document.getElementById('dial');if(!d||!window.SGN)return;
+  var SITE=SGN.site||location.origin;
+  function enc(s){return encodeURIComponent(s||'');}
+  var XURL='https://x.com/intent/tweet?text='+enc(SGN.tweet);
+  function mailHref(email){var e=SGN.email||{};return 'mailto:'+email+'?subject='+enc(e.subject)+'&body='+enc(e.body);}
+  function attr(s){return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/\n/g,'&#10;');}
+
+  var IC_ARROW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  var IC_CHEV='<svg class="cv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+  var IC_COPY='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="1.6"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>';
+  var IC_CHECK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
+  var IC_MAIL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg>';
+
+  function control(a){
+    if(a.type==='reveal') return '<button type="button" class="r-act tog" aria-expanded="false">'+a.cta+IC_CHEV+'</button>';
+    if(a.type==='copy')   return '<button type="button" class="r-act" data-copy="'+attr(SITE)+'" data-copied="Link copied">'+a.cta+IC_COPY+'</button>';
+    var href=a.type==='tweet'?XURL:(a.href||'#');
+    var ext=/^https?:/.test(href);
+    return '<a class="r-act" href="'+attr(href)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+a.cta+IC_ARROW+'</a>';
+  }
+  function option(it){
+    if(it.kind==='address'){
+      var full=it.label+'\n'+it.lines.join('\n');
+      return '<div class="opt addr"><div class="opt-main"><span class="opt-label">'+it.label+'</span>'+
+        it.lines.map(function(l){return '<span class="opt-sub">'+l+'</span>';}).join('')+
+        '</div><button type="button" class="mini" data-copy="'+attr(full)+'" data-copied="Copied">Copy'+IC_COPY+'</button></div>';
+    }
+    var href=it.kind==='mail'?mailHref(it.sub):it.href;
+    var ext=/^https?:/.test(href);
+    return '<a class="opt" href="'+attr(href)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+
+      '<div class="opt-main"><span class="opt-label">'+it.label+'</span>'+(it.sub?'<span class="opt-sub">'+it.sub+'</span>':'')+'</div>'+
+      (it.kind==='mail'?IC_MAIL:IC_ARROW)+'</a>';
+  }
+
+  SGN.actions.forEach(function(a,i){
+    var wrap=document.createElement('div');
+    wrap.className='action';
+    var panel=(a.type==='reveal'&&a.items)?('<div class="panel"><div class="panel-grid">'+a.items.map(option).join('')+'</div></div>'):'';
+    wrap.innerHTML=
+      '<div class="row'+(i<2?' prio':'')+'">'+
+        '<div class="r-idx"><span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">'+DIAL_ICONS[i]+'</svg></span></div>'+
+        '<div class="r-main"><div class="r-title"><h3>'+a.title+'</h3></div><p class="r-copy">'+a.copy+'</p></div>'+
+        control(a)+
+      '</div>'+panel;
+    d.appendChild(wrap);
+  });
+
+  /* point every tweet button (hero + nav) at the pre-filled post */
+  [].forEach.call(document.querySelectorAll('[data-xpost]'),function(el){el.href=XURL;});
+
+  /* copy-to-clipboard with graceful fallback */
+  function copyText(v){
+    if(navigator.clipboard&&navigator.clipboard.writeText)return navigator.clipboard.writeText(v);
+    return new Promise(function(res,rej){try{var ta=document.createElement('textarea');ta.value=v;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);res();}catch(err){rej(err);}});
+  }
+  function flash(btn){var msg=btn.getAttribute('data-copied')||'Copied';if(!btn._orig)btn._orig=btn.innerHTML;if(btn._t)clearTimeout(btn._t);btn.innerHTML=msg+IC_CHECK;btn.classList.add('copied');btn._t=setTimeout(function(){btn.innerHTML=btn._orig;btn.classList.remove('copied');btn._t=null;},1600);}
+
+  d.addEventListener('click',function(e){
+    var tog=e.target.closest('.tog');
+    if(tog){var ac=tog.closest('.action');tog.setAttribute('aria-expanded',ac.classList.toggle('open')?'true':'false');return;}
+    var cp=e.target.closest('[data-copy]');
+    if(cp){e.preventDefault();copyText(cp.getAttribute('data-copy')).then(function(){flash(cp);},function(){flash(cp);});}
+  });
+})();
+
+/* socials */
+(function(){var s=document.getElementById('social');if(!s||!window.SGN)return;s.innerHTML=SGN.socials;})();
+
+/* add to calendar — generate a downloadable .ics for the tweetstorm */
+(function(){
+  var btn=document.getElementById('calBtn');if(!btn)return;
+  var ev=(window.SGN&&SGN.event)||{};
+  var start=new Date(ev.start||'2026-06-10T22:00:00+02:00');
+  var end=new Date(start.getTime()+((ev.durationMins||60)*60000));
+  function z(d){return d.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'');}
+  var site=(SGN&&SGN.site)||'https://stargatenow.com';
+  var ics=[
+    'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//STARGATENOW//Tweetstorm//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH',
+    'BEGIN:VEVENT',
+    'UID:tweetstorm-'+z(start)+'@stargatenow.com',
+    'DTSTAMP:'+z(start),
+    'DTSTART:'+z(start),
+    'DTEND:'+z(end),
+    'SUMMARY:'+(ev.title||'STARGATENOW — Global Tweetstorm'),
+    'DESCRIPTION:Join the synchronized #SaveStargate tweetstorm. Post with #SaveStargate and #StargateNow and tag @AmazonMGMStudios @PrimeVideo.\\n'+site,
+    'URL:'+site,
+    'LOCATION:Online — X (Twitter)',
+    'END:VEVENT','END:VCALENDAR'
+  ].join('\r\n');
+  btn.addEventListener('click',function(e){
+    e.preventDefault();
+    var blob=new Blob([ics],{type:'text/calendar;charset=utf-8'});
+    var url=URL.createObjectURL(blob);
+    var a=document.createElement('a');a.href=url;a.download='stargatenow-tweetstorm.ics';
+    document.body.appendChild(a);a.click();document.body.removeChild(a);
+    setTimeout(function(){URL.revokeObjectURL(url);},1500);
+  });
+})();
+
+/* every inline SVG here is decorative (each control has visible text) — hide from assistive tech */
+[].forEach.call(document.querySelectorAll('svg'),function(s){s.setAttribute('aria-hidden','true');s.setAttribute('focusable','false');});
+</script>
+</body>
+</html>
