@@ -1,4 +1,4 @@
-/* Shared campaign content for STARGATENOW.
+/* Shared campaign content for Stargate Now Europe.
    Edit this file to update actions, contact targets and footer links. */
 window.SGN = {
   /* Canonical site URL — used by the "Copy link" action. */
@@ -9,7 +9,7 @@ window.SGN = {
      (+02:00 = CEST), so it resolves to the same instant in every timezone.
      durationMins is the calendar event length. */
   event: {
-    title: "STARGATENOW — Global Tweetstorm",
+    title: "Stargate Now Europe — Global Tweetstorm",
     start: "2026-06-10T22:00:00+02:00",
     durationMins: 60
   },
@@ -40,8 +40,7 @@ window.SGN = {
       copy:"Send targeted, <b>polite</b> notes straight to Amazon leadership. Each opens a pre-written, respectful email.",
       items:[
         { kind:"mail", label:"M. Hopkins", sub:"mike.hopkins@amazonstudios.com" },
-        { kind:"mail", label:"P. Friedlander", sub:"pfriedlander@amazon.com" },
-        { kind:"mail", label:"A. Jassy", sub:"ajassy@amazon.com" }
+        { kind:"mail", label:"P. Friedlander", sub:"pfriedlander@amazon.com" }
       ] },
 
     { title:"Physical Letters", cta:"View address", type:"reveal",
@@ -71,5 +70,5 @@ window.SGN = {
   ],
 
   socials:
-    '<a href="https://x.com/StargateNow_EU" target="_blank" rel="noopener" aria-label="STARGATENOW on X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>'
+    '<a href="https://x.com/StargateNow_EU" target="_blank" rel="noopener" aria-label="Stargate Now Europe on X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>'
 };
