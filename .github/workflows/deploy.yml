@@ -49,8 +49,10 @@ jobs:
           # so it can be matched against the server's authorized_keys. -P "" also
           # fails cleanly if the key is passphrase-protected (unusable in CI).
           echo "Public key derived from SSH_KEY secret (must be in the server's authorized_keys):"
-          ssh-keygen -y -P "" -f ~/.ssh/deploy_key \
-            || echo "::error::Could not read SSH_KEY. It may be malformed or passphrase-protected (passphrase keys can't be used in CI)."
+          if ! ssh-keygen -y -P "" -f ~/.ssh/deploy_key; then
+            echo "::error::Could not read SSH_KEY. It is malformed or passphrase-protected. Deploy keys must have NO passphrase (CI can't unlock them). Regenerate with: ssh-keygen -t ed25519 -N '' -f deploy_key"
+            exit 1
+          fi
           ssh-keyscan -p "${SSH_PORT:-22}" -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
 
       - name: Deploy with rsync
