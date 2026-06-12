@@ -10,7 +10,7 @@ window.SGN = {
      durationMins is the calendar event length. */
   event: {
     title: "Stargate Now Europe — Global Tweetstorm",
-    start: "2026-06-10T22:00:00+02:00",
+    start: "2026-06-16T19:30:00+02:00",
     durationMins: 60
   },
 
