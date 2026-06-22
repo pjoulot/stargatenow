@@ -390,7 +390,7 @@ footer{padding:clamp(50px,7vw,84px) 0 56px;border-top:1px solid var(--line)}
   </div>
 </footer>
 
-<script src="data.js?v=3"></script>
+<script src="data.js?v=4"></script>
 <script>
 /* countdown */
 (function(){var e={d:'[data-cd=d]',h:'[data-cd=h]',m:'[data-cd=m]',s:'[data-cd=s]'};for(var k in e)e[k]=document.querySelector(e[k]);var t=new Date((window.SGN&&SGN.event&&SGN.event.start)||'2026-06-24T10:00:00-07:00').getTime();function pad(n){return String(n).padStart(2,'0')}function tick(){var d=Math.max(0,t-Date.now()),x=Math.floor(d/1000);var dd=Math.floor(x/86400);x-=dd*86400;var hh=Math.floor(x/3600);x-=hh*3600;var mm=Math.floor(x/60),ss=x-mm*60;e.d.textContent=pad(dd);e.h.textContent=pad(hh);e.m.textContent=pad(mm);e.s.textContent=pad(ss)}tick();setInterval(tick,1000)})();
